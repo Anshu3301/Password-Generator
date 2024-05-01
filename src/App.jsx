@@ -18,7 +18,7 @@ function App() {
     if(numadded){ randoms+='0123456789'}
     if(charadded){ randoms+='~!@#$%^&*()_+-'}
 
-    // console.log(length);
+
       for (let i=0; i<length; i++) {
         mypassword +=  randoms[Math.floor(Math.random()*randoms.length)]
       }
