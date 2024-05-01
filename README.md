@@ -1,4 +1,4 @@
 # Password Generator
-## Tech Stack: React + Tailwind CSS
+### Tech Stack: React + Tailwind CSS
 
-# Preview:  (will be loaded shortly...)
+### Preview:  (will be loaded shortly...)
