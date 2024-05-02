@@ -3,7 +3,7 @@ import { useCallback, useState, useEffect, useRef } from 'react'
 
 function App() {
 
-  const [length, setLength] = useState(6)
+  const [length, setLength] = useState(8)
   const [numadded, setNumadded] = useState(false)
   const [charadded, setCharadded] = useState(false)
   const [upperadded, setupperadded] = useState(false)
@@ -40,10 +40,10 @@ function App() {
   }
 
   return (
-    <>
+  <>
     <div className='h-screen w-screen grid place-items-center'>
-    <div className='w-96 h-96 relative bg-cyan-500 grid place-items-center rounded-md'>
-    <h1 className='text-blue-950 text-2xl text-center font-semibold flex-wrap tracking-wider text-pretty'>PASSWORD  GENERATOR</h1>
+     <div className='w-96 h-96 relative bg-cyan-500 grid place-items-center rounded-md'>
+      <h1 className='text-blue-950 text-2xl text-center font-semibold flex-wrap tracking-wider text-pretty'>PASSWORD  GENERATOR</h1>
       <div className='h-80 w-96'>
         <div className='w-full flex justify-center mt-5 relative '>
            <input type="text" value={` ${password}`} readOnly ref={referenceofinput} className='inline w-[75%] h-10 rounded-s-md outline-none text-lg font-mono' onLoad={passwordgenerator}/>
@@ -52,27 +52,26 @@ function App() {
         <div className='w-full flex flex-col justify-center mt-5'>
           <label className='w-[92.5%] h-10 flex items-center bg-lime-500 ml-4 my-2 rounded-md'>
             <span className='text-lg ml-1 text-black'> Length: {length} </span>
-            <input type="range" name="" id="" min={6} max={20} value={length} className='cursor-pointer w-[58%] inline ml-14 accent-blue-500' onChange={(e)=>{setLength(e.target.value)}}/>
+            <input type="range" name="" id="" min={8} max={20} value={length} className='cursor-pointer w-[58%] inline ml-14 accent-blue-500 touch-none' onChange={(e)=>{setLength(e.target.value)}}/>
           </label>          
           <label className='w-[92.5%] h-10 flex items-center cursor-pointer bg-lime-500 ml-4 my-2 rounded-md'>
             <span className=' text-lg ml-1'>Include Uppercase (A-Z)</span>
-            <input type="checkbox" name="" id="" className='h-6 w-6 ml-[37%] accent-blue-500' defaultChecked={upperadded} onChange={()=>{setupperadded((prev)=>!prev)}}/>
+            <input type="checkbox" name="" id="" className='h-6 w-6 ml-[37%] cursor-pointer accent-blue-500' defaultChecked={upperadded} onChange={()=>{setupperadded((prev)=>!prev)}}/>
           </label>
           <label className='w-[92%] h-10 flex items-center cursor-pointer bg-lime-500 ml-4 my-2 rounded-md'>
             <span className=' text-lg ml-1'>Include Numbers (0-9) </span>
-            <input type="checkbox" name="" id="" className='h-6 w-6 ml-36 accent-blue-500' defaultChecked={numadded} onChange={()=>{setNumadded((prev)=>!prev)}}/>
+            <input type="checkbox" name="" id="" className='h-6 w-6 ml-36 cursor-pointer accent-blue-500' defaultChecked={numadded} onChange={()=>{setNumadded((prev)=>!prev)}}/>
           </label>
           <label className='w-[92%] h-10 flex items-center cursor-pointer bg-lime-500 ml-4 my-2 rounded-md'>
             <span className=' text-lg ml-1'>Include Symbols (@-#)</span>
-            <input type="checkbox" name="" id="" className='h-6 w-6 ml-[40.4%] accent-blue-500' defaultChecked={charadded} onChange={()=>{setCharadded((prev)=>!prev)}}/>
+            <input type="checkbox" name="" id="" className='h-6 w-6 ml-[40.4%] cursor-pointer accent-blue-500' defaultChecked={charadded} onChange={()=>{setCharadded((prev)=>!prev)}}/>
           </label>
         </div>
       </div>
+     </div>
     </div>
-    </div>
-    
      
-    </>
+  </>
   )
 }
 
